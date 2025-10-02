@@ -5,94 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSC Electrical</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-    header {
-      background-color: #ff6600;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      background-color: #111;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: #ff6600;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .cta-button {
-      background-color: #ff6600;
-      color: #000;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #111;
-      color: #888;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #000; color: #fff; }
+    header { background-color: #ff6600; padding: 20px; text-align: center; }
+    header img.logo { max-width: 200px; display: block; margin: 0 auto 10px; }
+    nav { background-color: #111; text-align: center; padding: 10px 0; }
+    nav a { color: #ff6600; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .cta-button { background-color: #ff6600; color: #000; padding: 10px 20px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+    footer { background-color: #111; color: #888; text-align: center; padding: 20px; font-size: 14px; }
+    .gallery img { width: 100%; max-width: 300px; margin: 10px; border: 2px solid #ff6600; }
+    .reviews { background-color: #111; padding: 20px; border-radius: 8px; }
+    .review { margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    @media (max-width: 600px) { nav a { display: block; margin: 10px 0; } }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="SSC Electrical Logo" class="logo">
     <h1>SSC Electrical</h1>
     <p>Licensed Electrical Contractor</p>
   </header>
-
   <nav>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="#services">What I Do</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <section id="about">
-    <h2>About Us</h2>
-    <p>
-      With years of experience, SSC Electrical provides high-quality electrical services for homes and businesses. Fully licensed and insured, we guarantee reliable and safe work every time.
-    </p>
-    <p><strong>ABN:</strong> 89396232051<br>
-    <strong>Contractor Licence No.:</strong> 89941<br>
-    <strong>Electrical Licence No.:</strong> 147194</p>
+    <h2>About Me</h2>
+    <p>G’day, I’m Callan — the bloke behind SSC Electrical. I’ve been in the electrical industry for over 20 years, and in that time I’ve seen it all — from dodgy switchboards to tight ceiling crawls to full-scale solar setups.</p>
+    <p>I started SSC Electrical with a simple goal: deliver honest, high-quality electrical work that customers can count on. I believe in doing the job properly the first time, treating every site like it’s my own home, and making sure you’re never left in the dark.</p>
+    <p>Fully licensed and insured, I back my work with experience, attention to detail, and pride in getting it right — safely and cleanly.</p>
+    <p><strong>ABN:</strong> 89396232051<br><strong>Contractor Licence No.:</strong> 89941<br><strong>Electrical Licence No.:</strong> 147194</p>
   </section>
-
   <section id="services">
-    <h2>Our Services</h2>
+    <h2>What I Do</h2>
     <ul>
-      <li>Residential and commercial wiring</li>
-      <li>Switchboard upgrades</li>
-      <li>LED lighting installation</li>
-      <li>Safety inspections</li>
-      <li>Emergency repairs</li>
+      <li>🏠 Residential installs, upgrades & repairs</li>
+      <li>🔌 Switchboard upgrades & safety checks</li>
+      <li>💡 LED lighting & energy-efficient fitouts</li>
+      <li>🔋 Grid-connected solar systems & ESS battery installs</li>
+      <li>🔥 Smoke alarms & PowerPoints</li>
+      <li>❄️ Split system air conditioning (ARCtick licensed)</li>
+      <li>🚨 Emergency callouts – quick response when you need it most</li>
     </ul>
   </section>
-
+  <section id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery">
+      <img src="img1.jpg" alt="Work 1">
+      <img src="img2.jpg" alt="Work 2">
+      <img src="img3.jpg" alt="Work 3">
+      <img src="img4.jpg" alt="Work 4">
+      <img src="img5.jpg" alt="Work 5">
+      <img src="img6.jpg" alt="Work 6">
+    </div>
+  </section>
+  <section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <div class="review"><strong>John N Mason</strong> ★★★★★<br> Very professional, reliable and thorough. Hard working too. Replaced our underground power. Highly recommend.</div>
+      <div class="review"><strong>Eleanor Lim</strong> ★★★★★<br> Fabulous...Callan diagnosed any electrical issues and tended to our requirements in detail...his work is very tidy and efficient. We highly recommend Callan.</div>
+      <div class="review"><strong>Susan Caruana</strong> ★★★★★<br> Callan came and did an awesome job, got me out of a fix. Very reasonable rates too. Thanks Callan!</div>
+      <div class="review"><strong>Amelia Jane</strong> ★★★★★<br> Prompt, great service and prices.</div>
+      <div class="review"><strong>Acura Multimedia</strong> ★★★★★<br> Very professional – diagnosed and fixed the issue quickly. Highly recommend!</div>
+      <div class="review"><strong>Todd Otton</strong> ★★★★★<br> Great job Callan, two poles, two meter boards in, ready to go – Energex ready 🤘</div>
+    </div>
+  </section>
   <section id="contact">
     <h2>Get in Touch</h2>
     <p>Email: <a href="mailto:callan@sscelectrical.com.au" style="color: #ff6600;">callan@sscelectrical.com.au</a></p>
-    <p>Phone: <a href="tel:+1234567890" style="color: #ff6600;">+1 234 567 890</a></p>
+    <p>Phone: <a href="tel:0411272520" style="color: #ff6600;">0411 272 520</a></p>
     <a class="cta-button" href="mailto:callan@sscelectrical.com.au">Contact Us</a>
   </section>
-
   <footer>
     &copy; 2025 SSC Electrical. All rights reserved.
   </footer>
