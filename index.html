@@ -69,6 +69,10 @@
   <meta charset="UTF-8">
   <title>12 Image Gallery Layout</title>
   <style>
+    .gallery {
+      max-width: 900px; /* Adjust as needed */
+      margin: 0 auto;
+    }
     .gallery-row {
       display: grid;
       gap: 16px;
@@ -83,43 +87,46 @@
     .img-landscape {
       width: 100%;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
+      object-fit: cover; /* fills frame, crops if necessary */
       background: #eee;
+      display: block;
     }
     .img-portrait {
       width: 100%;
       aspect-ratio: 9 / 16;
-      object-fit: cover;
+      object-fit: cover; /* fills frame, crops if necessary */
       background: #eee;
+      display: block;
     }
   </style>
 </head>
 <body>
   <h2>Gallery: 12 Images</h2>
-  <!-- 3 rows of 2 landscape images each -->
-  <div class="gallery-row landscape-row">
-    <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
-    <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
-  </div>
-  <div class="gallery-row landscape-row">
-    <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
-    <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
-  </div>
-  <div class="gallery-row landscape-row">
-    <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
-    <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
-  </div>
-  <!-- 2 rows of 3 portrait images each -->
-  <div class="gallery-row portrait-row">
-    <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
-    <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
-    <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
-  </div>
-  <div class="gallery-row portrait-row">
-    <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
-    <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
-    <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
-  </div>
+  <div class="gallery">
+    <!-- 3 rows of 2 landscape images each -->
+    <div class="gallery-row landscape-row">
+      <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
+      <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
+    </div>
+    <div class="gallery-row landscape-row">
+      <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
+      <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
+    </div>
+    <div class="gallery-row landscape-row">
+      <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
+      <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
+    </div>
+    <!-- 2 rows of 3 portrait images each -->
+    <div class="gallery-row portrait-row">
+      <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
+      <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
+      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
+    </div>
+    <div class="gallery-row portrait-row">
+      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
+      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
+      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
+    </div>
 </section>
 <section id="reviews">
 <h2>What Our Customers Say</h2>
