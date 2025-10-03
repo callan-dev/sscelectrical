@@ -70,31 +70,33 @@
   <title>12 Image Gallery Layout</title>
   <style>
     .gallery {
-      max-width: 900px; /* Adjust as needed */
+      max-width: 1000px;
       margin: 0 auto;
+      width: 100%;
     }
     .gallery-row {
       display: grid;
       gap: 16px;
       margin-bottom: 24px;
+      width: 100%; /* Ensures row stretches to .gallery width */
     }
     .landscape-row {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
     }
     .portrait-row {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     }
     .img-landscape {
       width: 100%;
       aspect-ratio: 16 / 9;
-      object-fit: cover; /* fills frame, crops if necessary */
+      object-fit: cover;
       background: #eee;
       display: block;
     }
     .img-portrait {
       width: 100%;
       aspect-ratio: 9 / 16;
-      object-fit: cover; /* fills frame, crops if necessary */
+      object-fit: cover;
       background: #eee;
       display: block;
     }
