@@ -70,32 +70,32 @@
   <title>Separated Landscape and Portrait Grids</title>
   <style>
     .gallery-section {
-      max-width: 1000px;
-      margin: 0 auto 40px auto;
+      max-width: 900px;
+      margin: 0 auto 5px auto;
       width: 100%;
     }
     .landscape-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 5px;
+      margin-bottom: 5px;
     }
     .portrait-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 5px;
     }
     .img-landscape {
       width: 100%;
       aspect-ratio: 16/9;
-      object-fit: cover;
+      object-fit: fill;
       background: #eee;
       display: block;
     }
     .img-portrait {
       width: 100%;
-      aspect-ratio: 9/16;
-      object-fit: cover;
+      aspect-ratio: 4/5;
+      object-fit: fill;
       background: #eee;
       display: block;
     }
@@ -114,6 +114,17 @@
       <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
       <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
       <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
+    </div>
+  </div>
+  <div class="gallery-section">
+    <h2>Portrait Photos</h2>
+    <div class="portrait-grid">
+      <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
+      <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
+      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
+      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
+      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
+      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
     </div>
   </div>
   <div class="gallery-section">
