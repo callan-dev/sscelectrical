@@ -67,64 +67,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>12 Image Gallery Layout</title>
+  <title>Separated Landscape and Portrait Grids</title>
   <style>
-    .gallery {
+    .gallery-section {
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
       width: 100%;
     }
-    .gallery-row {
+    .landscape-grid {
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       margin-bottom: 24px;
-      width: 100%; /* Ensures row stretches to .gallery width */
     }
-    .landscape-row {
-      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-    }
-    .portrait-row {
-      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    .portrait-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
     .img-landscape {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16/9;
       object-fit: cover;
       background: #eee;
       display: block;
     }
     .img-portrait {
       width: 100%;
-      aspect-ratio: 9 / 16;
+      aspect-ratio: 9/16;
       object-fit: cover;
       background: #eee;
       display: block;
     }
+    h2 {
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
-  <h2>Gallery: 12 Images</h2>
-  <div class="gallery">
-    <!-- 3 rows of 2 landscape images each -->
-    <div class="gallery-row landscape-row">
+  <div class="gallery-section">
+    <h2>Landscape Photos</h2>
+    <div class="landscape-grid">
       <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
       <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
-    </div>
-    <div class="gallery-row landscape-row">
       <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
       <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
-    </div>
-    <div class="gallery-row landscape-row">
       <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
       <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
     </div>
-    <!-- 2 rows of 3 portrait images each -->
-    <div class="gallery-row portrait-row">
+  </div>
+  <div class="gallery-section">
+    <h2>Portrait Photos</h2>
+    <div class="portrait-grid">
       <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
       <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
       <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
-    </div>
-    <div class="gallery-row portrait-row">
       <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
       <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
       <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
