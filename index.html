@@ -70,19 +70,19 @@
   <style>
     .landscape-gallery {
       max-width: 1000px;   /* wider for landscape */
-      margin: 20px auto 40px auto;
+      margin: 0 auto 40px auto;
       width: 100%;
     }
     .portrait-gallery {
       max-width: 1000px;    /* narrower for portrait */
-      margin: 20 auto 40px auto;
+      margin: 0 auto 40px auto;
       width: 100%;
     }
     .landscape-grid {
       display: grid;
-      grid-auto-columns: repeat(1.5, 1.5fr);
+      grid-auto-columns: repeat(2, 1.5fr);
       gap: 10px;
-      margin-bottom: opx;
+      justify-content: center;
     }
     .portrait-grid {
       display: grid;
@@ -90,8 +90,8 @@
       gap: 10px;
     }
     .img-landscape {
-      width: 250px;
-      height: 200px;
+      width: 100%;
+      aspect-ratio: 16/9;
       object-fit: cover;
       background: #eee;
       display: block;
