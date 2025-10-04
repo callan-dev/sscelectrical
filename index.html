@@ -72,25 +72,29 @@
     }
     .gallery-landscape {
         max-height: 1200px;
+        max-width: 1200px
         margin: 0 auto;
         display: flex;
+        max-width: 1200px;
         flex-direction; column;
         gap: 20px;
        } 
     .gallery-portrait {
-      max-width: 1200px;  /* make bigger so photos aren’t tiny */
+      max-width: 1200px;
+        max-height: 1200px;/* make bigger so photos aren’t tiny */
       margin: 0 auto;
       display: flex;
+        max-width: 800px;
       flex-direction: column;
       gap: 20px; /* spacing between landscape + portrait sections */
     }
+      .top-left {
+      grid-column: 1 / 2;
+          }
     .landscape-grid {
       display: grid;
       grid-template-columns: repeat(2, 3fr);
       gap: 20px; 
-
-      grid-auto-flow: dense;
-        grid-auto-flow: column;
     }
     .portrait-grid {
       display: grid;
@@ -99,14 +103,14 @@
     }
     .img-landscape {
       width: 100%;
-      aspect-ratio: 16/9; /* bigger and balanced */
+      aspect-ratio: 3/2; /* bigger and balanced */
       object-fit: cover;
       background: #eee;
       display: block;
     }
     .img-portrait {
       width: 66%;
-      aspect-ratio: 9/6; /* tall */
+      aspect-ratio: 2/3; /* tall */
       object-fit: cover;
       background: #eee;
       display: block;
