@@ -67,77 +67,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Aligned Gallery: Landscape & Portrait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body {
+      background: #f8f8fa;
+      font-family: Arial, sans-serif;
     }
-    .gallery-landscape {
-        max-height: 800px;
-        max-width: 1200px
-        grid-template-columns: 2fr 1fr;
-        grid-auto-rows: 300px;
-        display: cover;
-        max-width: 1400px;
-        gap: 20px;
-       } 
-    .gallery-portrait {
-      max-width: 800px;
-        max-height: 1200px;/* make bigger so photos aren’t tiny */
-      grid-template-columns: 3fr 1fr;
-      grid-auto-rows: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px; /* spacing between landscape + portrait sections */
+    .gallery-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 16px;
     }
-      .top-left {
-      grid-column: 1 / 2;
-          }
+    .gallery-row {
+      display: grid;
+      gap: 24px; /* Gaps can be adjusted as needed */
+      margin-bottom: 32px;
+    }
+    /* Landscape row: 2 columns */
     .landscape-grid {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 300px;
-      gap: 20px;
-        column-gap: 20px;
+      /* Height of 400px (H), width of each cell 600px (W) */
+      /* The aspect-ratio keeps images in correct proportion */
     }
+    /* Portrait row: 3 columns */
     .portrait-grid {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-auto-rows: 300px;
-      gap: 20px; /* match landscape spacing */
+      grid-template-columns: repeat(3, 1fr);
+      /* Height of 600px (W), width of each cell 400px (H) */
     }
+    /* Landscape image box */
     .img-landscape {
       width: 100%;
-      aspect-ratio: 3/2; /* bigger and balanced */
+      aspect-ratio: 3/2; /* W/H = 1.5 */
+      height: 400px;     /* H */
       object-fit: cover;
       background: #eee;
       display: block;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #ddd;
     }
+    /* Portrait image box */
     .img-portrait {
-      width: 66%;
-      aspect-ratio: 2/3; /* tall */
+      width: 100%;
+      aspect-ratio: 2/3; /* w/h = 2/3 so h = 1.5w */
+      height: 600px;     /* W */
       object-fit: cover;
       background: #eee;
       display: block;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #ddd;
+    }
+    @media (max-width: 1250px) {
+      .gallery-container { max-width: 98vw; }
+      .img-landscape { height: calc(33vw * 2 / 3); }
+      .img-portrait { height: calc(33vw * 3 / 2 / 3); }
+    }
+    @media (max-width: 900px) {
+      .gallery-row { gap: 12px; }
+      .img-landscape, .img-portrait { border-radius: 7px; }
     }
   </style>
 </head>
 <body>
   <div class="gallery-container">
-    <div class="landscape-grid">
+    <div class="gallery-row landscape-grid">
       <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
       <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
-      <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
-      <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
-      <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
-      <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
+      <img src="img3.jpg" alt="Landscape 3" class="img-landscape">
+      <img src="img4.jpg" alt="Landscape 4" class="img-landscape">
     </div>
-    <div class="portrait-grid">
+    <div class="gallery-row portrait-grid">
       <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
       <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
-      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
-      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
-      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
-      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
+      <img src="img7.jpg" alt="Portrait 3" class="img-portrait">
+      <img src="img8.jpg" alt="Portrait 4" class="img-portrait">
+      <img src="img9.jpg" alt="Portrait 5" class="img-portrait">
+      <img src="img10.jpg" alt="Portrait 6" class="img-portrait">
     </div>
+  </div>
  </section>
 <section id="reviews">
 <h2>What Our Customers Say</h2>
