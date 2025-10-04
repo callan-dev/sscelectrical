@@ -62,83 +62,69 @@
 </ul>
 </section>
 <section id="gallery">
-    <meta charset="UTF-8"
 <h2>Our Work</h2>>
 <div class="gallery">
-<html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    }
-    .gallery-container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 16px;
-    }
-    .landscape-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-    .portrait-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    /* Sizing logic: 
-       - Landscape images are wider, portrait images are taller.
-       - Set aspect-ratio for both to 3/2 (landscape) and 2/3 (portrait).
-       - Use width: 100% so images fill their grid cell.
-       - Use object-fit: cover for best appearance.
-    */
-    .img-landscape {
-      width: 100%;
-      aspect-ratio: 3/2;   /* wide */
-      object-fit: cover;
-      background: #eee;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #ddd;
-    }
-    .img-portrait {
-      width: 100%;
-      aspect-ratio: 2/3;   /* tall */
-      object-fit: cover;
-      background: #eee;
-      display: block;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #ddd;
-    }
-    @media (max-width: 1250px) {
-      .gallery-container { max-width: 98vw; }
-      .landscape-grid, .portrait-grid { gap: 12px; }
-      .img-landscape, .img-portrait { border-radius: 7px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="gallery-container">
-    <div class="landscape-grid">
-      <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
-      <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
-      <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
-      <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
-      <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
-      <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
-    </div>
-    <div class="portrait-grid">
-      <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
-      <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
-      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
-      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
-      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
-      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
-    </div>
+<div class="gallery-container">
+  <div class="landscape-grid">
+    <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
+    <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
+    <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
+    <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
+    <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
+    <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
   </div>
+  <div class="portrait-grid">
+    <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
+    <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
+    <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
+    <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
+    <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
+    <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
+  </div>
+</div>
+<style>
+.gallery-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+.landscape-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+}
+.img-landscape {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ddd;
+}
+.img-portrait {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ddd;
+}
+@media (max-width: 1250px) {
+  .gallery-container { max-width: 98vw; }
+  .landscape-grid, .portrait-grid { gap: 12px; }
+  .img-landscape, .img-portrait { border-radius: 7px; }
+}
+</style>
  </section>
 <section id="reviews">
 <h2>What Our Customers Say</h2>
