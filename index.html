@@ -82,8 +82,10 @@
       }
     .landscape-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, max(2, 1fr));
+      grid-template-columns: 200px 1fr 2fr;
       grid-template-rows: auto 200px auto
+      justify-self: center; /* left | right | center | stretch */
+      align-self: end;      /* top | bottom | center | stretch */
       grid-auto-flow: dense;  /* backfill gaps */
       gap: 10px;
       margin-bottom: 20px; 
