@@ -86,8 +86,11 @@
     }
     .landscape-grid {
       display: grid;
-      grid-template-columns: repeat(1.5, 1.5fr);
+      grid-template-columns: repeat(2, 3fr);
       gap: 20px; 
+
+      grid-auto-flow: dense;
+        grid-auto-flow: column;
     }
     .portrait-grid {
       display: grid;
