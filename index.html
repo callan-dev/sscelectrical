@@ -81,14 +81,18 @@
       width: 100%;
       }
     .landscape-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto 200px auto
-      justify-self: center; /* left | right | center | stretch */
-      align-self: end;      /* top | bottom | center | stretch */
-      grid-auto-flow: dense;  /* backfill gaps */
-      gap: 10px;
-      margin-bottom: 20px; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);   /* 2 equal columns */
+  grid-template-rows: auto 200px auto;     /* define 3 row heights */
+  grid-auto-flow: dense;                   /* fills gaps neatly */
+  
+  justify-self: center; /* how THIS grid sits in its parent */
+  align-self: end;      /* align THIS grid in its parent */
+  
+  gap: 10px;            /* space between items */
+  margin-bottom: 20px;  /* space below the entire grid */
+}
+
      }
     .portrait-grid {
       display: grid;
