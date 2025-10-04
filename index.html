@@ -69,48 +69,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
     }
-
-    /* Shared container so edges line up */
     .gallery-container {
       max-width: 1200px;  /* make bigger so photos aren’t tiny */
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 40px; /* spacing between landscape + portrait sections */
+      gap:20px; /* spacing between landscape + portrait sections */
     }
-
-    /* Landscape grid */
     .landscape-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px; /* same spacing as portraits */
+      grid-template-columns: repeat(1.5, 1.5fr);
+      gap: 20px; 
     }
-
-    /* Portrait grid */
     .portrait-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px; /* match landscape spacing */
     }
-
-    /* Landscape images */
     .img-landscape {
       width: 100%;
-      aspect-ratio: 3 / 2; /* bigger and balanced */
+      aspect-ratio: 16/9; /* bigger and balanced */
       object-fit: cover;
       background: #eee;
       display: block;
     }
-
-    /* Portrait images */
     .img-portrait {
-      width: 100%;
-      aspect-ratio: 2 / 3; /* tall */
+      width: 66%;
+      aspect-ratio: 9/6; /* tall */
       object-fit: cover;
       background: #eee;
       display: block;
@@ -119,8 +105,6 @@
 </head>
 <body>
   <div class="gallery-container">
-
-    <!-- Landscapes on top -->
     <div class="landscape-grid">
       <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
       <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
@@ -129,8 +113,6 @@
       <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
       <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
     </div>
-
-    <!-- Portraits below -->
     <div class="portrait-grid">
       <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
       <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
