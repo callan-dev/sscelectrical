@@ -68,7 +68,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery</title>
+  <title>SSC Electrical Gallery</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -77,38 +77,34 @@
       padding: 20px;
     }
 
-    /* Shared container so both grids align */
+    /* shared wrapper so both align */
     .gallery-container {
-      max-width: 1200px;   /* SAME width for both grids */
+      max-width: 1000px;   /* same width for both */
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px; /* equal spacing between sections */
     }
 
-    /* Headings (optional) */
-    h2 {
-      margin: 20px 0 10px;
-      text-align: center;
-    }
-
-    /* Landscape grid = 2 columns */
+    /* 2-column grid for landscapes */
     .landscape-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 40px; /* space before portraits */
+      gap: 15px; /* same gap as portraits */
     }
 
-    /* Portrait grid = 3 columns */
+    /* 3-column grid for portraits */
     .portrait-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 15px; /* consistent spacing */
     }
 
-    /* Images - keep aspect ratio, no stretching */
+    /* consistent image sizing */
     .img-landscape {
       width: 100%;
-      aspect-ratio: 16/9;  /* widescreen look */
-      object-fit: cover;   /* crop neatly if needed */
+      aspect-ratio: 4/3;   /* not as wide as 16/9 → looks closer to portraits */
+      object-fit: cover;
       background: #eee;
       display: block;
     }
@@ -125,7 +121,6 @@
 <body>
   <div class="gallery-container">
 
-    <h2>Landscapes</h2>
     <div class="landscape-grid">
       <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
       <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
@@ -135,7 +130,6 @@
       <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
     </div>
 
-    <h2>Portraits</h2>
     <div class="portrait-grid">
       <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
       <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
