@@ -75,29 +75,42 @@
       padding: 20px;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-      gap: 15px; /* consistent spacing */
-      max-width: 1000px; /* same width for both orientations */
+    /* Shared container so edges line up */
+    .gallery-container {
+      max-width: 1200px;  /* make bigger so photos aren’t tiny */
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px; /* spacing between landscape + portrait sections */
     }
 
-    /* Portrait images → 1 column, tall */
-    .portrait {
-      grid-column: span 1;
+    /* Landscape grid */
+    .landscape-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px; /* same spacing as portraits */
+    }
+
+    /* Portrait grid */
+    .portrait-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px; /* match landscape spacing */
+    }
+
+    /* Landscape images */
+    .img-landscape {
       width: 100%;
-      aspect-ratio: 2 / 3;   /* tall portrait */
+      aspect-ratio: 3 / 2; /* bigger and balanced */
       object-fit: cover;
       background: #eee;
       display: block;
     }
 
-    /* Landscape images → 2 columns, shorter but wider */
-    .landscape {
-      grid-column: span 2;
+    /* Portrait images */
+    .img-portrait {
       width: 100%;
-      aspect-ratio: 3 / 2;   /* balanced so area ~ same as portraits */
+      aspect-ratio: 2 / 3; /* tall */
       object-fit: cover;
       background: #eee;
       display: block;
@@ -105,31 +118,27 @@
   </style>
 </head>
 <body>
-  <div class="gallery">
+  <div class="gallery-container">
 
-    <!-- Landscapes first -->
-    <img src="img1.jpg" alt="Landscape 1" class="landscape">
-    <img src="img2.jpg" alt="Landscape 2" class="landscape">
+    <!-- Landscapes on top -->
+    <div class="landscape-grid">
+      <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
+      <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
+      <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
+      <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
+      <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
+      <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
+    </div>
 
-    <!-- Portraits -->
-    <img src="img5.jpg" alt="Portrait 1" class="portrait">
-    <img src="img6.jpg" alt="Portrait 2" class="portrait">
-    <img src="img8.jpg" alt="Portrait 3" class="portrait">
-
-    <!-- More landscapes -->
-    <img src="img7.jpg" alt="Landscape 3" class="landscape">
-    <img src="img13.jpg" alt="Landscape 4" class="landscape">
-
-    <!-- More portraits -->
-    <img src="img10.jpg" alt="Portrait 4" class="portrait">
-    <img src="img3.jpg" alt="Portrait 5" class="portrait">
-    <img src="img9.jpg" alt="Portrait 6" class="portrait">
-
-    <!-- Remaining landscapes -->
-    <img src="img4.jpg" alt="Landscape 5" class="landscape">
-    <img src="img11.jpg" alt="Landscape 6" class="landscape">
-
-  </div>
+    <!-- Portraits below -->
+    <div class="portrait-grid">
+      <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
+      <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
+      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
+      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
+      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
+      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
+    </div>
  </section>
 <section id="reviews">
 <h2>What Our Customers Say</h2>
