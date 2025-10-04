@@ -69,15 +69,13 @@
   <meta charset="UTF-8">
   <style>
     .landscape-gallery {
-      max-width: 1000px;   /* wider for landscape */
+      max-width: 900px;   /* wider for landscape */
       margin: 0 auto 40px auto;
-      width: 100%;
     }
     .portrait-gallery {
-      max-width: 1000px;    /* narrower for portrait */
+      max-width: 900px;    /* narrower for portrait */
       margin: 0 auto 40px auto;
-      width: 100%;
-    }
+      }
     .landscape-grid {
       display: grid;
       grid-template-columns: repeat(1.5, 1.5fr);
@@ -96,8 +94,8 @@
       display: block;
     }
     .img-portrait {
-      width: 200px;
-      height: 250px;
+      width: 100%;
+      aspect-ratio: 4/5;
       object-fit: cover;
       background: #eee;
       display: block;
