@@ -67,11 +67,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aligned Gallery: Landscape & Portrait</title>
+  <title>Aligned Landscape & Portrait Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #f8f8fa;
       font-family: Arial, sans-serif;
     }
     .gallery-container {
@@ -79,38 +78,38 @@
       margin: 40px auto;
       padding: 0 16px;
     }
-    .gallery-row {
+    .landscape-grid {
       display: grid;
-      gap: 24px; /* Gaps can be adjusted as needed */
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 24px;
       margin-bottom: 32px;
     }
-    /* Landscape row: 2 columns */
-    .landscape-grid {
-      grid-template-columns: repeat(2, 1fr);
-      /* Height of 400px (H), width of each cell 600px (W) */
-      /* The aspect-ratio keeps images in correct proportion */
-    }
-    /* Portrait row: 3 columns */
     .portrait-grid {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
-      /* Height of 600px (W), width of each cell 400px (H) */
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px;
     }
-    /* Landscape image box */
+
+    /* Sizing logic: 
+       - Landscape images are wider, portrait images are taller.
+       - Set aspect-ratio for both to 3/2 (landscape) and 2/3 (portrait).
+       - Use width: 100% so images fill their grid cell.
+       - Use object-fit: cover for best appearance.
+    */
     .img-landscape {
       width: 100%;
-      aspect-ratio: 3/2; /* W/H = 1.5 */
-      height: 400px;     /* H */
+      aspect-ratio: 3/2;   /* wide */
       object-fit: cover;
       background: #eee;
       display: block;
       border-radius: 12px;
       box-shadow: 0 2px 8px #ddd;
     }
-    /* Portrait image box */
     .img-portrait {
       width: 100%;
-      aspect-ratio: 2/3; /* w/h = 2/3 so h = 1.5w */
-      height: 600px;     /* W */
+      aspect-ratio: 2/3;   /* tall */
       object-fit: cover;
       background: #eee;
       display: block;
@@ -119,30 +118,28 @@
     }
     @media (max-width: 1250px) {
       .gallery-container { max-width: 98vw; }
-      .img-landscape { height: calc(33vw * 2 / 3); }
-      .img-portrait { height: calc(33vw * 3 / 2 / 3); }
-    }
-    @media (max-width: 900px) {
-      .gallery-row { gap: 12px; }
+      .landscape-grid, .portrait-grid { gap: 12px; }
       .img-landscape, .img-portrait { border-radius: 7px; }
     }
   </style>
 </head>
 <body>
   <div class="gallery-container">
-    <div class="gallery-row landscape-grid">
+    <div class="landscape-grid">
       <img src="img1.jpg" alt="Landscape 1" class="img-landscape">
       <img src="img2.jpg" alt="Landscape 2" class="img-landscape">
-      <img src="img3.jpg" alt="Landscape 3" class="img-landscape">
-      <img src="img4.jpg" alt="Landscape 4" class="img-landscape">
+      <img src="img7.jpg" alt="Landscape 3" class="img-landscape">
+      <img src="img13.jpg" alt="Landscape 4" class="img-landscape">
+      <img src="img4.jpg" alt="Landscape 5" class="img-landscape">
+      <img src="img11.jpg" alt="Landscape 6" class="img-landscape">
     </div>
-    <div class="gallery-row portrait-grid">
+    <div class="portrait-grid">
       <img src="img5.jpg" alt="Portrait 1" class="img-portrait">
       <img src="img6.jpg" alt="Portrait 2" class="img-portrait">
-      <img src="img7.jpg" alt="Portrait 3" class="img-portrait">
-      <img src="img8.jpg" alt="Portrait 4" class="img-portrait">
-      <img src="img9.jpg" alt="Portrait 5" class="img-portrait">
-      <img src="img10.jpg" alt="Portrait 6" class="img-portrait">
+      <img src="img8.jpg" alt="Portrait 3" class="img-portrait">
+      <img src="img10.jpg" alt="Portrait 4" class="img-portrait">
+      <img src="img3.jpg" alt="Portrait 5" class="img-portrait">
+      <img src="img9.jpg" alt="Portrait 6" class="img-portrait">
     </div>
   </div>
  </section>
