@@ -69,24 +69,24 @@
   <meta charset="UTF-8">
   <style>
     .landscape-gallery {
-      max-width: 1000px;   /* wider for landscape */
+      max-width: 1200px;   /* wider for landscape */
       margin: 0 auto 40px auto;
       width: 100%;
     }
     .portrait-gallery {
-      max-width: 1000px;    /* narrower for portrait */
+      max-width: 900px;    /* narrower for portrait */
       margin: 0 auto 40px auto;
       width: 100%;
     }
     .landscape-grid {
       display: grid;
-      grid-auto-columns: repeat(2, 1.5fr);
+      grid-template-columns: repeat(2, 1.5fr);
       gap: 10px;
       justify-content: center;
     }
     .portrait-grid {
       display: grid;
-      grid-auto-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
     .img-landscape {
