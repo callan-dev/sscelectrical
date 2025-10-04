@@ -80,19 +80,19 @@
     }
     .landscape-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-auto-columns: repeat(2, 1fr);
       gap: 10px;
       margin-bottom: opx;
     }
     .portrait-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-auto-columns: repeat(3, 1fr);
       gap: 10px;
     }
     .img-landscape {
-      width: 200px;
-      aspect-ratio: 4/5;
-      object-fit: fill;
+      width: 400px;
+      height: 350px;
+      object-fit: cover;
       background: #eee;
       display: block;
     }
